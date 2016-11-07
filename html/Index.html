@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+	<title>Home</title>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/hamburg.css">
+</head>
+
+<body>
+
+<div Class="navbar" >
+
+		<ul class="nav" id="mynav">
+      <li><a href="Index.html"><img src="css/images/logo.png" height="40px;"></a></li>
+      <li><a class="active" href="Index.html">Home</a></li>
+			<li><a href="news.html">News of Yonder Year</a></li>
+      <li><a href="Game.html">Generation Game 2.0</a></li>
+      <li><a href="Tile.html">Tile Matching Memory Game</a></li>
+			<li><a href="diet.html">Diet Help</a></li>
+			<li><a href="ex.html">Suggested Exercise</a></li>
+			<li><a href="events.html">Events</a></li>
+      <li class="burger">
+        <a href="javascript:void(0);" style="font-size:22px; padding:5px,5px,;" onclick="myFunction()">☰</a>
+      </li>
+		</ul>
+</div>
+<div class="container">
+
+
+<div>
+	<p>Welcome In this website I hope you are able to deal with the aging process better by making changes to your diet, exercises and  gerneral well being. There are also activities that will help you to practice your mental skills and refine your memory.  If you aere looking for a social meeting with people of a similar age, then youve come to the right place.</p>
+
+</div>
+
+
+
+<div class="slideshow-container">
+  
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="css/images/bis.jpg"  style="width:100%;">
+    </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="css/images/diet.jpg" style="width:100%">
+    
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">/div>
+    <img src="css/images/carehome.jpg" style="width:100%">
+    
+  </div>
+  <br />
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" ></span> 
+  <span class="dot" ></span> 
+  <span class="dot" ></span> 
+</div>
+
+<script>
+//slideshow stuff
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 6000);
+
+}
+//responsive stuff
+
+function myFunction() {
+    var x = document.getElementById("mynav");
+    if (x.className === "nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav";
+    }
+}
+</script>
+
+
+</div>
+</body>
+
+</html>

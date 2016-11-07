@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+	<title>Generation Game</title>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/game.css">
+<link rel="stylesheet" type="text/css" href="css/hamburg.css">
+</head>
+
+<body>
+<div Class="navbar" >
+
+		<ul class="nav" id="mynav">
+      <li><a href="Index.html"><img src="css/images/logo.png" height="40px;"></a></li>
+      <li><a  href="Index.html">Home</a></li>
+			<li><a href="news.html">News of Yonder Year</a></li>
+      <li><a class="active" href="Game.html">Generation Game 2.0</a></li>
+      <li><a href="Tile.html">Tile Matching Memory Game</a></li>
+			<li><a href="diet.html">Diet Help</a></li>
+			<li><a href="ex.html">Suggested Exercise</a></li>
+			<li><a href="events.html">Events</a></li>
+      <li class="burger">
+        <a href="javascript:void(0);" style="font-size:22px; padding:5px,5px,;" onclick="myFunction()">☰</a>
+      </li>
+		</ul>
+</div>
+
+<div class="container" >
+
+	<div>
+		<h3>The Generation Game 2.0</h3>
+		<br>
+		<p>Welcome to the game, it will begin when you click the button you will have a set amount of time to watch the video before it disappears, at which point select the images that you think are correct. if
+		</p>
+	</div>
+
+	<div><button onclick="begin()" id="hidden"><h4>Begin the Game and click this button</h4></button>
+
+	<div class="hidden" id="#gamebegin">	
+		<div id="video">
+
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/NbU0U1DLHns" frameborder="0" allowfullscreen autoplay="1">
+		</iframe>
+	</div>
+		
+
+			</div>
+					<div id="number">0</div>
+				<div style="float:left;">
+					<button onclick="document.getElementById('wrong').src='images/wrong.png'">
+					<div >	
+					<img id="wrong" src="css/images/gamepics/Apple.png">
+					</div>
+					</button>
+					<button onclick="document.getElementById('correct').src='images/correct.png'">
+					<div id="correct5">
+					<img id="correct" src="css/images/gamepics/clock.png">
+					</div>
+					</button>
+					<button onclick="document.getElementById('correct2').src='images/correct.png'">
+					<div id="correct5">
+					<img id="correct2" src="css/images/gamepics/Dimon.png">
+					</div>
+					</button>
+				</div>
+				<div style="float:left;">
+					<button onclick="document.getElementById('wrong3').src='images/wrong.png'">
+					<div >
+					<img id="wrong3" src="css/images/gamepics/Dog-Buscit.png">
+					</div>
+					</button>
+					<button onclick="document.getElementById('wrong2').src='images/wrong.png'">
+					<div >
+					<img id="wrong2" src="css/images/gamepics/cup.png">
+					</div>
+					</button>
+					<button onclick="document.getElementById('correct3').src='images/correct.png'">
+					<div id="correct5">
+					<img id="correct3"src="css/images/gamepics/horn.png">
+					</div>
+					</button>
+				</div>	
+				<div style="float:left;">
+					<button onclick="document.getElementById('correct4').src='images/correct.png'">
+					<div id="correct5">
+					<img id="correct4" src="css/images/gamepics/icecream.png">
+					</div>
+					</button>
+					<button onclick="document.getElementById('wrong4').src='images/wrong.png'">
+					<div >
+					<img id="wrong4" src="css/images/gamepics/toast.png">
+					</div>
+					</button>
+					<button onclick="document.getElementById('wrong5').src='images/wrong.png'">	
+					<div>
+					<img id="wrong5" src="css/images/smily.png">
+					</div>
+					</button>
+				</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+   <script>
+
+
+function begin(){
+	document.getElementById("#gamebegin").classList.toggle("show")
+}
+
+$("button").click(function(){
+    $("hidden").hide();
+});
+
+$('#correct5').click(function() {
+    $('#number').html(function(i, val) { return val*1+1 });
+});
+
+</script
+<!--makes page fade after 40 seconds-->
+<script>
+
+
+setTimeout(fade_out, 40000);
+
+function fade_out() {
+  $("#video").fadeOut().empty();
+}
+</script>
+</body>
+</html>

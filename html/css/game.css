@@ -1,0 +1,24 @@
+button div img {
+	max-width: 300px;
+	max-height: 300px;
+	background-color: white;
+}
+
+
+
+.tbackground {
+	background-color: white;
+}
+
+.hidden { 
+    display: none; 
+}
+
+.show{
+	display: block;
+}
+
+.container {
+	max-width: 900px;
+	background-color: white;
+}
