@@ -20,7 +20,7 @@
 			<li><a href="ex.html">Suggested Exercise</a></li>
 			<li><a class="active" href="events.html">Events</a></li>
       <li class="burger">
-        <a href="javascript:void(0);" style="font-size:22px; padding:5px,5px,;" onclick="myFunction()">☰</a>
+        <a href="javascript:void(0);" style="font-size:22px; padding:5px,5px,;" onclick="myFunction()">&#9776;</a>
       </li>
 		</ul>
 </div>
@@ -28,5 +28,16 @@
 <div class="container">
 
 </div>
+<script type="text/javascript">
+/*this makes the mobile nav works*/
+function myFunction() {
+    var x = document.getElementById("mynav");
+    if (x.className === "nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav";
+    }
+}
+</script>
 </body>
 </html>

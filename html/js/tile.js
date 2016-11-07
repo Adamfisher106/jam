@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<head>
-	<title>Tile Match</title>
-<link rel="stylesheet" type="text/css" href="css/index.css">
-<link rel="stylesheet" type="text/css" href="css/tile.css">
-<link rel="stylesheet" type="text/css" href="css/hamburg.css">
-<script>
-/*this puts the array and randomly generates the board*/
 var memory_array = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H','I','I','J','J','K','K','L','L'];
 var memory_values = [];
 var memory_tile_ids = [];
@@ -20,7 +10,7 @@ Array.prototype.memory_tile_shuffle = function(){
         this[j] = this[i];
         this[i] = temp;
     }
-}/*this generates the board in the html*/
+}
 function newBoard(){
 	tiles_flipped = 0;
 	var output = '';
@@ -29,7 +19,7 @@ function newBoard(){
 		output += '<div id="tile_'+i+'" onclick="memoryFlipTile(this,\''+memory_array[i]+'\')"></div>';
 	}
 	document.getElementById('memory_board').innerHTML = output;
-} /*this says when they flip over */
+}
 function memoryFlipTile(tile,val){
 	if(tile.innerHTML == "" && memory_values.length < 2){
 		tile.style.background = '#FFF';
@@ -44,14 +34,12 @@ function memoryFlipTile(tile,val){
 				tiles_flipped += 2;
 				memory_values = [];
             	memory_tile_ids = [];
-            	/*when you complete the game an alert will come up*/
 				if(tiles_flipped == memory_array.length){
 					alert("You have done very well you beauty, have a crack on this one, why dont you.");
 					document.getElementById('memory_board').innerHTML = "";
 					newBoard();
 				}
 			} else {
-				/*this should flip the tiles backover to the jpg*/
 				function flip2Back(){
 				    var tile_1 = document.getElementById(memory_tile_ids[0]);
 				    var tile_2 = document.getElementById(memory_tile_ids[1]);
@@ -67,43 +55,3 @@ function memoryFlipTile(tile,val){
 		}
 	}
 }
-
-/*this makes the mobile nav works*/
-function myFunction() {
-    var x = document.getElementById("mynav");
-    if (x.className === "nav") {
-        x.className += " responsive";
-    } else {
-        x.className = "nav";
-    }
-}
-
-</script>
-
-</head>
-
-<body>
-<div Class="navbar" >
-
-		<ul class="nav" id="mynav">
-      <li><a href="Index.html"><img src="css/images/logo.png" height="40px;"></a></li>
-      <li><a  href="Index.html">Home</a></li>
-			<li><a href="news.html">News of Yonder Year</a></li>
-      <li><a href="Game.html">Generation Game 2.0</a></li>
-      <li><a class="active" href="Tile.html">Tile Matching Memory Game</a></li>
-			<li><a href="diet.html">Diet Help</a></li>
-			<li><a href="ex.html">Suggested Exercise</a></li>
-			<li><a href="events.html">Events</a></li>
-      <li class="burger">
-        <a href="javascript:void(0);" style="font-size:22px; padding:5px,5px,;" onclick="myFunction()">&#9776;</a>
-      </li>
-		</ul>
-</div>
-
-<div class="container">
-<div id="memory_board"></div>
-<script>newBoard();</script>
-</div>
-</body>
-
-</html>

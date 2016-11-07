@@ -22,7 +22,7 @@
 			<li><a href="ex.html">Suggested Exercise</a></li>
 			<li><a href="events.html">Events</a></li>
       <li class="burger">
-        <a href="javascript:void(0);" style="font-size:22px; padding:5px,5px,;" onclick="myFunction()">☰</a>
+        <a href="javascript:void(0);" style="font-size:22px; padding:5px,5px,;" onclick="myFunction()">&#9776;</a>
       </li>
 		</ul>
 </div>
@@ -106,7 +106,7 @@
 	</div>
    <script>
 
-
+/*this starts the game*/
 function begin(){
 	document.getElementById("#gamebegin").classList.toggle("show")
 }
@@ -119,7 +119,18 @@ $('#correct5').click(function() {
     $('#number').html(function(i, val) { return val*1+1 });
 });
 
-</script
+
+/*this makes the mobile nav works*/
+function myFunction() {
+    var x = document.getElementById("mynav");
+    if (x.className === "nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav";
+    }
+}
+
+</script>
 <!--makes page fade after 40 seconds-->
 <script>
 
